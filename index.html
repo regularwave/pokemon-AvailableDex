@@ -12,17 +12,29 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
+<body onload="renderPoke()">
     <div id="container" class="floatcontainer">
         <h1 id="header" class="header">
             AvailableDex
         </h1>
         <div id="content" class="content">
-            AvailableDex
+            <div id="col" class="col">
+
+                <div id="dexinput" class="tile">
+                    <input type="number" name="dexnumber" id="dexnumber" min="1" max="905" value="151"><br>
+                    <button onclick="renderPoke()">Catch 'em!</button>
+
+                </div>
+                <div id="games" class="tile"></div>
+            </div>
+            <div id="catch" class="tile">
+
+                AvailableDex
+            </div>
         </div>
     </div>
     <footer>
-        <!-- <div id="counter"></div> -->
+        <div id="counter">text:10</div>
     </footer>
 </body>
 

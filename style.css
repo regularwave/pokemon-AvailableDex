@@ -12,25 +12,46 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    color: white;
+    background-color: #555555;
+    background-image: url("./img/pokepattern_Zorasgar.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+a {
+    color: white;
+    /* font-size: .7rem; */
+}
+
+#games {
+    text-align: left;
 }
 
 .floatcontainer {
     margin: auto;
     max-width: 100%;
-    width: 50%;
+    /* width: 50%; */
     text-align: center;
-    border: 1px solid black;
     border-radius: .3rem;
+}
+
+.tile {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: .8rem;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .header {
     font-family: "Exo", sans-serif;
-    color: darkgreen;
 }
 
 .content {
+    gap: 3px;
     font-family: "Roboto", sans-serif;
-    color: darkmagenta;
+    display: flex;
+    flex-direction: row;
 }
 
 footer {
