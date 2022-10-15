@@ -1,13 +1,12 @@
-// const visCount = document.getElementById('visCount');
-// updateSiteCounter();
+const visCount = document.getElementById('visCount');
 
-// function updateSiteCounter() {
-//     fetch('https://api.countapi.xyz/hit/regularwave_pokemon-AvailableDex')
-//         .then(response => response.json())
-//         .then(response => {
-//             visCount.innerHTML = response.value;
-//         })
-// }
+function updateSiteCounter() {
+    fetch('https://api.countapi.xyz/hit/regularwave_pokemon-AvailableDex')
+        .then(response => response.json())
+        .then(response => {
+            visCount.innerHTML = response.value;
+        })
+}
 
 const gameNames = ["Red", "Green", "Blue", "Yellow", "Gold", "Silver", "Crystal", "Ruby", "Sapphire", "FireRed", "LeafGreen", "Emerald", "Colosseum", "XD", "Diamond", "Pearl", "Platinum", "HeartGold", "SoulSilver", "Black", "White", "Black2", "White2", "X", "Y", "Omega Ruby", "Alpha Sapphire", "Sun", "Moon", "Ultra Sun", "Ultra Moon", "Let's Go Pikachu", "Let's Go Eevee", "Sword", "Shield", "Brilliant Diamond", "Shining Pearl", "Legends Arceus"];
 
@@ -70,10 +69,15 @@ async function renderPoke() {
                     var a = document.createElement('a');
                     switch (pokeData[poke][loc]) {
                         case "B":
+                        case "BD":
                         case "C":
+                        case "C*":
+                        case "CC":
                         case "CD":
                         case "CCR":
+                        case "CCDA":
                         case "D":
+                        case "DD":
                         case "DA":
                         case "E":
                         case "ED":
@@ -81,6 +85,25 @@ async function renderPoke() {
                         case "R":
                         case "RD":
                         case "S":
+                        case "CCB":
+                        case "CCD":
+                        case "CCDD":
+                        case "CCE":
+                        case "CCS":
+                        case "DE":
+                        case "DET":
+                        case "DRE":
+                        case "DRET":
+                        case "DWB":
+                        case "DWE":
+                        case "DWET":
+                        case "EDT":
+                        case "EVE":
+                        case "EvET":
+                        case "FS":
+                        case "FSB":
+                        case "FSE":
+                        case "FSET":
 
                             span.innerHTML = loc + " ";
                             a.href = 'https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_availability#Key';
@@ -100,6 +123,7 @@ async function renderPoke() {
                         case "EvE":
                         case "T":
                         case "PW":
+                        case "PWE":
                         case "x":
                         case "—":
                             break;
@@ -107,6 +131,7 @@ async function renderPoke() {
                         default:
 
                             span.innerHTML = "NOPE " + loc + " " + pokeData[poke][loc];
+                            console.log("NOPE " + loc + " " + pokeData[poke][loc]);
                             catchcard.appendChild(span);
                             catchcard.appendChild(document.createElement('br'));
                             break;
@@ -121,5 +146,8 @@ async function renderPoke() {
         }
 
     })
+
+    updateSiteCounter();
+
 }
 
