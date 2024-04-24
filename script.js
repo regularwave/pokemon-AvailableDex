@@ -1,13 +1,3 @@
-const visCount = document.getElementById('visCount');
-
-function updateSiteCounter() {
-    fetch('https://api.countapi.xyz/hit/regularwave_pokemon-AvailableDex')
-        .then(response => response.json())
-        .then(response => {
-            visCount.innerHTML = response.value;
-        })
-}
-
 const gameNames = ["Red", "Green", "Blue", "Yellow", "Gold", "Silver", "Crystal", "Ruby", "Sapphire", "FireRed", "LeafGreen", "Emerald", "Colosseum", "XD", "Diamond", "Pearl", "Platinum", "HeartGold", "SoulSilver", "Black", "White", "Black2", "White2", "X", "Y", "Omega Ruby", "Alpha Sapphire", "Sun", "Moon", "Ultra Sun", "Ultra Moon", "Let's Go Pikachu", "Let's Go Eevee", "Sword", "Shield", "Brilliant Diamond", "Shining Pearl", "Legends Arceus"];
 
 function genGameCheckboxes() {
@@ -137,8 +127,6 @@ async function renderPoke() {
                             break;
                     }
 
-                    // catchcard.appendChild(span);
-                    // catchcard.appendChild(document.createElement('br'));
                 }
 
             })
@@ -147,7 +135,4 @@ async function renderPoke() {
 
     })
 
-    updateSiteCounter();
-
 }
-
